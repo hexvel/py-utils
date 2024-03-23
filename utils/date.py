@@ -3,7 +3,7 @@ import datetime
 
 class DateTimeUtils:
     @staticmethod
-    def get_current_datetime():
+    def get_current_datetime() -> datetime.datetime:
         """
         Function to get the current date and time.
 
@@ -13,7 +13,9 @@ class DateTimeUtils:
         return current_datetime
 
     @staticmethod
-    def get_specific_datetime(year, month, day, hour=0, minute=0, second=0):
+    def get_specific_datetime(
+        year: int, month: int, day: int, hour: int = 0, minute: int = 0, second: int = 0
+    ) -> datetime.datetime:
         """
         Function to work with specific dates and time intervals.
 
@@ -29,7 +31,7 @@ class DateTimeUtils:
         return specific_datetime
 
     @staticmethod
-    def format_datetime(datetime_obj, format_str):
+    def format_datetime(datetime_obj: datetime.datetime, format_str: str) -> str:
         """
         Function to work with different date and time formats.
 
@@ -41,7 +43,9 @@ class DateTimeUtils:
         return formatted_datetime
 
     @staticmethod
-    def calculate_time_difference(datetime_obj1, datetime_obj2):
+    def calculate_time_difference(
+        datetime_obj1: datetime.datetime, datetime_obj2: datetime.datetime
+    ) -> datetime.timedelta:
         """
         Function to calculate the difference between dates.
 
@@ -53,7 +57,9 @@ class DateTimeUtils:
         return time_difference
 
     @staticmethod
-    def add_time_to_datetime(datetime_obj, time_delta):
+    def add_time_to_datetime(
+        datetime_obj: datetime.datetime, time_delta: datetime.timedelta
+    ) -> datetime.datetime:
         """
         Function to add time to a date.
 
@@ -65,7 +71,9 @@ class DateTimeUtils:
         return new_datetime
 
     @staticmethod
-    def subtract_time_from_datetime(datetime_obj, time_delta):
+    def subtract_time_from_datetime(
+        datetime_obj: datetime.datetime, time_delta: datetime.timedelta
+    ) -> datetime.datetime:
         """
         Function to subtract time from a date.
 
